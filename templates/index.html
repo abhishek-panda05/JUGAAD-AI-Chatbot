@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUGAAD se hi toh duniya chalti hai</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="{{ url_for('static', filename='images/panda-logo.png') }}" alt="JUGAAD Panda Logo">
+                <h1>JUGAAD</h1>
+            </div>
+            <p class="tagline">JUGAAD se hi to duniya chalti hai</p>
+        </header>
+
+        <main>
+            <div class="chat-container">
+                <div id="chat-messages">
+                    <!-- Messages will be added here dynamically -->
+                </div>
+                
+                <div class="suggestions">
+                    <button class="chip" data-suggestion="Find me Amazon deals">Amazon Deals</button>
+                    <button class="chip" data-suggestion="Show Flipkart offers">Flipkart Offers</button>
+                    <button class="chip" data-suggestion="Food delivery discounts">Food Deals</button>
+                    <button class="chip" data-suggestion="Fashion coupons">Fashion Deals</button>
+                </div>
+
+                <form id="chat-form">
+                    <div class="input-container">
+                        <input type="text" id="user-input" placeholder="Ask me about deals and coupons..." autocomplete="off">
+                        <button type="submit" id="send-button">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p>Powered by Google Gemini AI 🌱</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
