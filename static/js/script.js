@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
         isProcessing = true;
         
         // Send message to server
-        fetch('/api/chat', {
+        fetch('https://web-production-a76fe.up.railway.app/api/chat', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
