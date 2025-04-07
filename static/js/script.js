@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function fetchGreeting() {
         showTypingIndicator();
         
-        fetch('/api/greeting')
+        fetch('https://web-production-a76fe.up.railway.app/api/greeting')
             .then(response => response.json())
             .then(data => {
                 removeTypingIndicator();
